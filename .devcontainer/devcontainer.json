@@ -1,0 +1,6 @@
+{
+  "name": "openclaw-configurator",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "remoteUser": "node",
+  "postCreateCommand": "sudo corepack enable && npm config set registry https://registry.npmmirror.com"
+}
