@@ -12,6 +12,19 @@ OpenClaw references:
 - OpenClaw repository: https://github.com/openclaw/openclaw
 - OpenClaw docs: https://docs.openclaw.ai/
 
+## OpenClaw Submodule
+
+This repository includes the upstream OpenClaw repository as a git submodule at `openclaw/`.
+
+Purpose of this submodule:
+- Keep a local, version-pinned source of truth for schema and config behavior references.
+- Support schema extraction and documentation lookup while building this configurator.
+
+Submodule policy:
+- Treat `openclaw/` as upstream reference code, not as a workspace for feature development.
+- AI agents should only search or read files in `openclaw/`.
+- Do not edit, create, delete, or run project-modifying commands inside `openclaw/` unless explicitly requested by the user.
+
 ## Why This Project
 
 OpenClaw configuration is powerful and extensive. The config format supports many top-level sections (channels, agents, tools, gateway, hooks, plugins, and more), and OpenClaw validates config strictly.
